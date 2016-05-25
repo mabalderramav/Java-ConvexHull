@@ -24,11 +24,22 @@ public class ConvexHullWidows extends JFrame
         //init components
         canvas = new ConvexHullCanvas();
 
+        JButton newButton = new JButton("New button");
+        JButton generateButton = new JButton("New button");
+        JButton solveButton = new JButton("New button");
+
+        JMenuBar menuBar = new JMenuBar();
+        menuBar.add(newButton);
+        menuBar.add(generateButton);
+        menuBar.add(solveButton);
+
         //set layout
         this.getContentPane().setLayout(new BorderLayout());
         this.getContentPane().add(canvas,BorderLayout.CENTER);
 
-        this.getContentPane().add(new Button("add"),BorderLayout.NORTH);
+        //this.getContentPane().add(new Button("add"),BorderLayout.NORTH);
+
+        this.setJMenuBar(menuBar);
 
         //add listeners
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
